@@ -1,7 +1,5 @@
 ## An autocompletion daemon for the Go programming language
 
-**IMPORTANT: consider switching to https://github.com/mdempsky/gocode if you have problems starting with Go version 1.10, due to changes in binary packages architecture (introduction of package cache) I'm not going to adjust gocode for it for quite some time. There is a higher chance that fork under the given link will have some solution to the problem sooner or later.**
-
 Gocode is a helper tool which is intended to be integrated with your source code editor, like vim, neovim and emacs. It provides several advanced capabilities, which currently includes:
 
  - Context-sensitive autocompletion
@@ -26,11 +24,11 @@ Also watch the [demo screencast](http://nosmileface.ru/images/gocode-demo.swf).
 
  2. Then you need to get the appropriate version of the gocode, for 6g/8g/5g compiler you can do this:
 
-    `go get -u github.com/nsf/gocode` (-u flag for "update")
+    `go get -u github.com/bhcleek/gocode` (-u flag for "update")
 
     Windows users should consider doing this instead:
 
-    `go get -u -ldflags -H=windowsgui github.com/nsf/gocode`
+    `go get -u -ldflags -H=windowsgui github.com/bhcleek/gocode`
 
     That way on the Windows OS gocode will be built as a GUI application and doing so solves hanging window issues with some of the editors.
 
@@ -80,7 +78,7 @@ In order to install vim scripts, you need to fulfill the following steps:
 
 Add the following line to your **.vimrc**:
 
-`Plugin 'nsf/gocode', {'rtp': 'vim/'}`
+`Plugin 'bhcleek/gocode', {'rtp': 'vim/'}`
 
 And then update your packages by running `:PluginInstall`.
 
@@ -88,7 +86,7 @@ And then update your packages by running `:PluginInstall`.
 
 Add the following line to your **.vimrc**:
 
-`Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }`
+`Plug 'bhcleek/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }`
 
 And then update your packages by running `:PlugInstall`.
 
@@ -105,7 +103,7 @@ Alternatively take a look at the vundle/pathogen friendly repo: https://github.c
 
 Add the following line to your **init.vim**:
 
-`Plugin 'nsf/gocode', {'rtp': 'nvim/'}`
+`Plugin 'bhcleek/gocode', {'rtp': 'nvim/'}`
 
 And then update your packages by running `:PluginInstall`.
 
@@ -113,7 +111,7 @@ And then update your packages by running `:PluginInstall`.
 
 Add the following line to your **init.vim**:
 
-`Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }`
+`Plug 'bhcleek/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }`
 
 And then update your packages by running `:PlugInstall`.
 
@@ -199,7 +197,7 @@ If something went wrong, the first thing you may want to do is manually start th
 
 `gocode -s -debug`
 
-Please, report bugs, feature suggestions and other rants to the [github issue tracker](http://github.com/nsf/gocode/issues) of this project.
+Please, report bugs, feature suggestions and other rants to the [github issue tracker](http://github.com/bhcleek/gocode/issues) of this project.
 
 ### Developing
 
